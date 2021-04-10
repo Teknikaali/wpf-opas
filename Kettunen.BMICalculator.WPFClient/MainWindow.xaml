@@ -22,9 +22,7 @@
             </Grid.RowDefinitions>
             <TextBlock Text="Weight (kg)" />
             <TextBox Name="WeightInput"
-                     Grid.Row="1"
-                     Background="MintCream"
-                     Foreground="DarkSalmon" />
+                     Grid.Row="1" />
         </Grid>
 
         <Grid Grid.Row="1">
@@ -34,9 +32,7 @@
             </Grid.RowDefinitions>
             <TextBlock Text="Height (cm)" />
             <TextBox Name="HeightInput"
-                     Grid.Row="1"
-                     Background="Cornsilk"
-                     Foreground="Chocolate" />
+                     Grid.Row="1" />
         </Grid>
 
         <Button Grid.Row="2"
