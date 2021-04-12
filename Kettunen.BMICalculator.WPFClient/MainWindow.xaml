@@ -21,7 +21,7 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Text="Weight (kg)" />
+            <TextBlock Text="Weight" />
             <TextBox Name="WeightInput"
                      Grid.Row="1"
                      d:Text="123" />
@@ -32,7 +32,7 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Text="Height (cm)" />
+            <TextBlock Text="Height" />
             <TextBox Name="HeightInput"
                      Grid.Row="1"
                      d:Text="456" />
