@@ -39,8 +39,10 @@
         </Grid>
 
         <Button Grid.Row="2"
-                Click="Button_Click"
-                Content="Calculate" />
+                Click="Button_Click">
+            <TextBlock Style="{x:Null}"
+                       Text="CALCULATE" />
+        </Button>
 
     </Grid>
 </Window>
