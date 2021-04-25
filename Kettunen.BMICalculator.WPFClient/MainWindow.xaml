@@ -17,56 +17,62 @@
         </Grid.RowDefinitions>
 
         <!--  Weight  -->
-        <Grid VerticalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <TextBlock Text="WEIGHT" />
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <TextBox Name="WeightInput"
-                         Grid.Column="1"
-                         Margin="12,0"
-                         d:Text="123"
-                         MaxLength="3"
-                         TextAlignment="Center" />
-                <TextBlock Grid.Column="2"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Text="kg" />
+        <Border Margin="24,24,24,12"
+                Style="{StaticResource ItemBorder}">
+            <Grid VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="WEIGHT" />
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="WeightInput"
+                             Grid.Column="1"
+                             Margin="12,0"
+                             d:Text="123"
+                             MaxLength="3"
+                             TextAlignment="Center" />
+                    <TextBlock Grid.Column="2"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Text="kg" />
+                </Grid>
             </Grid>
-        </Grid>
+        </Border>
 
-        <!--  HEIGHT  -->
-        <Grid Grid.Row="1"
-              VerticalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <TextBlock Text="HEIGHT" />
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <TextBox Name="HeightInput"
-                         Grid.Column="1"
-                         Margin="12,0"
-                         d:Text="183"
-                         MaxLength="3" />
-                <TextBlock Grid.Column="2"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Text="cm" />
+        <!--  Height  -->
+        <Border Grid.Row="1"
+                Margin="24,12,24,24"
+                Style="{StaticResource ItemBorder}">
+            <Grid VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="HEIGHT" />
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="HeightInput"
+                             Grid.Column="1"
+                             Margin="12,0"
+                             d:Text="183"
+                             MaxLength="3" />
+                    <TextBlock Grid.Column="2"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Text="cm" />
+                </Grid>
             </Grid>
-        </Grid>
+        </Border>
 
         <Button Grid.Row="2"
                 Click="Button_Click">
