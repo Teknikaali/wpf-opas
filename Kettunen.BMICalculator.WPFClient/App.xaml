@@ -18,6 +18,11 @@
             <Setter Property="FontSize" Value="48" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="TextAlignment" Value="Center" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#31142F" />
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#EB1555" />
