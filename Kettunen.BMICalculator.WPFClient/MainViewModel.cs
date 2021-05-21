@@ -44,9 +44,9 @@ namespace Kettunen.BMICalculator.WPFClient
 
             Navigate = new DelegateCommand(x =>
             {
-                if (x is InputViewModel calculatorViewModel)
+                if (x is InputViewModel inputViewModel)
                 {
-                    _resultViewModel.Result = _calculator.Calculate(calculatorViewModel.Weight, calculatorViewModel.Height / 100);
+                    _resultViewModel.Result = _calculator.Calculate(inputViewModel.Weight, inputViewModel.Height / 100);
                     CurrentViewModel = _resultViewModel;
                 }
                 else
