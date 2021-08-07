@@ -63,5 +63,34 @@
             <Setter Property="CornerRadius" Value="6" />
         </Style>
 
+        <Style TargetType="RadioButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Border Style="{StaticResource ItemBorder}">
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Viewbox>
+                                    <TextBlock Name="Symbol"
+                                               Text="{TemplateBinding Tag}" />
+                                </Viewbox>
+                                <TextBlock Name="Description"
+                                           Grid.Row="1"
+                                           Text="{TemplateBinding Content}" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Description" Property="Foreground" Value="White" />
+                                <Setter TargetName="Symbol" Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

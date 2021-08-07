@@ -12,10 +12,32 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
+        <!--  Gender  -->
+        <Grid Margin="24,24,24,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <RadioButton Margin="0,0,4,0"
+                         Content="FEMALE"
+                         GroupName="Gender"
+                         IsChecked="{Binding Gender, Converter={local:GenderConverter}, ConverterParameter=Female}"
+                         Tag="♀" />
+
+            <RadioButton Grid.Column="1"
+                         Margin="4,0,0,0"
+                         Content="MALE"
+                         GroupName="Gender"
+                         IsChecked="{Binding Gender, Converter={local:GenderConverter}, ConverterParameter=Male}"
+                         Tag="♂" />
+        </Grid>
+
         <!--  Weight  -->
-        <Border Margin="24,24,24,12"
+        <Border Grid.Row="1"
+                Margin="24,24,24,12"
                 Style="{StaticResource ItemBorder}">
             <Grid VerticalAlignment="Center">
                 <Grid.RowDefinitions>
@@ -45,7 +67,7 @@
         </Border>
 
         <!--  Height  -->
-        <Border Grid.Row="1"
+        <Border Grid.Row="2"
                 Margin="24,12,24,24"
                 Style="{StaticResource ItemBorder}">
             <Grid VerticalAlignment="Center">
