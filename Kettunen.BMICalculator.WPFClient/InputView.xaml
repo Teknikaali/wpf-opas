@@ -24,14 +24,14 @@
             <RadioButton Margin="0,0,4,0"
                          Content="FEMALE"
                          GroupName="Gender"
-                         IsChecked="{Binding Gender, Converter={local:GenderConverter}, ConverterParameter=Female}"
+                         IsChecked="{Binding Gender, Converter={local:GenderConverter}, ConverterParameter={x:Static local:Gender.Female}}"
                          Tag="♀" />
 
             <RadioButton Grid.Column="1"
                          Margin="4,0,0,0"
                          Content="MALE"
                          GroupName="Gender"
-                         IsChecked="{Binding Gender, Converter={local:GenderConverter}, ConverterParameter=Male}"
+                         IsChecked="{Binding Gender, Converter={local:GenderConverter}, ConverterParameter={x:Static local:Gender.Male}}"
                          Tag="♂" />
         </Grid>
 
@@ -85,7 +85,7 @@
                     <TextBox Name="HeightInput"
                              Grid.Column="1"
                              Margin="12,0"
-                             d:Text="183"
+                             d:Text="456"
                              MaxLength="3"
                              Text="{Binding Height, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Grid.Column="2"
